@@ -1,23 +1,24 @@
 require 'rails_helper'
 
-describe 'given an Animal object' do
+describe Animal do
 
+  # example animal object for testing
   subject do
     Animal.new('Bruce', 4, 'male')
   end
 
-  describe 'we can access its attributes' do
+  describe 'when accessing its attributes' do
 
-    it 'has the expected attributes' do
-      is_expected.to respond_to(:name)
-      is_expected.to respond_to(:age)
-      is_expected.to respond_to(:sex)
+    context 'it has the expected attributes' do
+      it { is_expected.to respond_to(:name) }
+      it { is_expected.to respond_to(:age) }
+      it { is_expected.to respond_to(:sex) }
     end
 
-    it 'doesn\'t have unexpected attributes' do
-      is_expected.not_to respond_to(:height)
-      is_expected.not_to respond_to(:smell)
-      is_expected.not_to respond_to(:drool)
+    context 'it doesn\'t have unexpected attributes' do
+      it { is_expected.not_to respond_to(:height) }
+      it { is_expected.not_to respond_to(:smell) }
+      it { is_expected.not_to respond_to(:drool) }
     end
 
   end
