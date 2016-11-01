@@ -9,7 +9,6 @@ class Shelter < ActiveRecord::Base
 
   # temporary, for debugging and such
   def display
-    p self.id
     print 'name: #{name}, city: #{city}, phone: #{phone}'
   end
 end
