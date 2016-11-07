@@ -4,7 +4,7 @@ describe Animal do
 
   # example animal object for testing
   subject do
-    Animal.new('Bruce', 4, 'male')
+    Animal.create()
   end
 
   describe 'when accessing its attributes' do
@@ -13,6 +13,7 @@ describe Animal do
       it { is_expected.to respond_to(:name) }
       it { is_expected.to respond_to(:age) }
       it { is_expected.to respond_to(:sex) }
+      it { is_expected.to respond_to(:shelter_id) }
     end
 
     context 'it doesn\'t have unexpected attributes' do
