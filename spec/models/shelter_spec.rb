@@ -4,7 +4,7 @@ describe Shelter do
 
   # example shelter object for testing
   subject do
-    Shelter.new('Furry Friends Shelter', 'Sunnyvale', '123-456-7890')
+    Shelter.create()
   end
 
   describe 'when accessing its attributes' do
