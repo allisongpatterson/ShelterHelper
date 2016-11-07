@@ -1,5 +1,6 @@
 class Shelter < ActiveRecord::Base
   attr_accessor :name, :city, :phone
+  has_many :animals
 
   def initialize(name, city, phone)
     @name = name

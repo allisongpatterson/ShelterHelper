@@ -1,5 +1,6 @@
 class Animal < ActiveRecord::Base
   attr_accessor :name, :age, :sex
+  belongs_to :shelter
 
 	def initialize(name, age, sex)
     # note to self: @some_attribute is pretty
