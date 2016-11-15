@@ -3,9 +3,7 @@ require 'rails_helper'
 describe Animal do
 
   # example animal object for testing
-  subject do
-    Animal.create()
-  end
+  subject { FactoryGirl.create(:animal) }
 
   describe 'when accessing its attributes' do
 
@@ -20,6 +18,13 @@ describe Animal do
       it { is_expected.not_to respond_to(:height) }
       it { is_expected.not_to respond_to(:smell) }
       it { is_expected.not_to respond_to(:drool) }
+    end
+
+    context 'its attributes contain the expected values' do
+      it { is_expected.to have_attributes(:name => 'Bruce') }
+      it { is_expected.to have_attributes(:age => 4) }
+      it { is_expected.to have_attributes(:sex => 'male') }
+      it { is_expected.to have_attributes(:shelter_id => 1) }
     end
 
   end

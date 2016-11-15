@@ -3,9 +3,7 @@ require 'rails_helper'
 describe Shelter do
 
   # example shelter object for testing
-  subject do
-    Shelter.create()
-  end
+  subject { FactoryGirl.create(:shelter) }
 
   describe 'when accessing its attributes' do
 
@@ -19,6 +17,12 @@ describe Shelter do
       it { is_expected.not_to respond_to(:color) }
       it { is_expected.not_to respond_to(:parking) }
       it { is_expected.not_to respond_to(:security) }
+    end
+
+    context 'its attributes contain the expected values' do
+      it { is_expected.to have_attributes(:name => 'Second Chance') }
+      it { is_expected.to have_attributes(:city => 'Sunnyvale') }
+      it { is_expected.to have_attributes(:phone => '123-456-7890') }
     end
 
   end
