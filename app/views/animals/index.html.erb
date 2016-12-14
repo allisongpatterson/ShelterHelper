@@ -2,11 +2,11 @@
 
 <table>
   <thead>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Sex</th>
-    <th>Shelter ID</th>
+    <th><%= sort_by :id %></th>
+    <th><%= sort_by :name %></th>
+    <th><%= sort_by :age %></th>
+    <th><%= sort_by :sex %></th>
+    <th><%= sort_by :shelter_id %></th>
   </thead>
   <tbody>
     <%- @animals.each do |animal| -%>
