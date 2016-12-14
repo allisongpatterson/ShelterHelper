@@ -1,7 +1,7 @@
 class SheltersController < ApplicationController
 
   def index
-    # foo
+    @shelters = Shelter.all
   end
 
   def create

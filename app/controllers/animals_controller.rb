@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
 
   def index
-    # foo
+    @animals = Animal.all
   end
 
   def create
