@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
 
   def index
-    @animals = Animal.all
+    @animals = Animal.order(sort_by_column(Animal))
   end
 
   def create
