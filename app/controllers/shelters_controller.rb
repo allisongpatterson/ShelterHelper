@@ -9,7 +9,7 @@ class SheltersController < ApplicationController
   end
 
   def show
-    #foo
+    @shelter = Shelter.find(id=params[:id])
   end
 
 end

@@ -9,7 +9,7 @@ class AnimalsController < ApplicationController
   end
 
   def show
-    #foo
+    @animal = Animal.find(id=params[:id])
   end
 
 end
