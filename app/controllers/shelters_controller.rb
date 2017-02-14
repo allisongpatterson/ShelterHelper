@@ -10,6 +10,7 @@ class SheltersController < ApplicationController
 
   def show
     @shelter = Shelter.find(id=params[:id])
+    @shelter_animals = Animal.where(shelter_id: params[:id])
   end
 
 end
