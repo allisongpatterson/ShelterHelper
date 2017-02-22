@@ -4,14 +4,14 @@ class SheltersController < ApplicationController
     @shelters = Shelter.order(sort_by_column(Shelter))
   end
 
+  def new
+    @shelter = Shelter.new
+  end
+
   def create
     @shelter = Shelter.new(shelter_params)
     @shelter.save
-    redirect_to @shelter
-  end
-
-  def new
-    @shelter = Shelter.new
+    redirect_to @shelter # take user to new shelter's page
   end
 
   def show

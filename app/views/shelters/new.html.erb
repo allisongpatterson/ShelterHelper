@@ -6,6 +6,8 @@
   <%= shelter_form.label :city %>
   <%= shelter_form.text_field :city %>
   <%= shelter_form.label :phone %>
-  <%= shelter_form.text_field :phone %>
+  <!-- todo: advantages of phone_field vs. text_field? -->
+  <%= shelter_form.phone_field :phone %>
   <%= shelter_form.submit 'submit', class: 'btn btn-primary' %>
+  <%= link_to 'cancel', '/shelters', class: 'btn btn-primary' %>
 <% end %>
